@@ -35,7 +35,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="step2_replication" name="2. Replication">
-        <mxGraphModel dx="1530" dy="1166" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -56,6 +56,9 @@
                 </mxCell>
                 <mxCell id="c3" value="configSrv-3&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="g_c" vertex="1">
                     <mxGeometry x="40" y="180" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend1" value="&lt;b&gt;3 сервера конфигурации:&lt;/b&gt;&lt;br&gt;Cерверы конфигурации разворачиваются как Replica Set (CSRS). Необходимо минимум 3 узла для кворума: это обеспечивает отказоустойчивость (High Availability). Без кворума кластер MongoDB не сможет выбирать Primary-узел, обновлять метаданные и балансировать чанки." style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontColor=#000000;spacingLeft=10;spacingTop=10;spacingRight=10;spacingBottom=10;" vertex="1" parent="1">
+                    <mxGeometry x="1010" y="50" width="260" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="g_s1" value="Replica Set Shard 1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
                     <mxGeometry x="150" y="380" width="220" height="260" as="geometry"/>
@@ -163,6 +166,9 @@
                 </mxCell>
                 <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mongos" target="g_s2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="bjwPpYj-MuAmLwBLa-L6-1" value="&lt;b&gt;3 сервера конфигурации:&lt;/b&gt;&lt;br&gt;Cерверы конфигурации разворачиваются как Replica Set (CSRS). Необходимо минимум 3 узла для кворума: это обеспечивает отказоустойчивость (High Availability). Без кворума кластер MongoDB не сможет выбирать Primary-узел, обновлять метаданные и балансировать чанки." style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontColor=#000000;spacingLeft=10;spacingTop=10;spacingRight=10;spacingBottom=10;" vertex="1" parent="1">
+                    <mxGeometry x="1070" y="50" width="260" height="180" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
