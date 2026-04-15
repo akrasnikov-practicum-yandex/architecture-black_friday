@@ -46,7 +46,7 @@
                     <mxGeometry x="400" y="200" width="160" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="g_c" value="Replica Set Config" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="760" y="50" width="220" height="260" as="geometry"/>
+                    <mxGeometry x="660" y="100" width="220" height="260" as="geometry"/>
                 </mxCell>
                 <mxCell id="c1" value="configSrv-1&lt;br&gt;(Первичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="g_c" vertex="1">
                     <mxGeometry x="40" y="20" width="140" height="60" as="geometry"/>
@@ -57,8 +57,8 @@
                 <mxCell id="c3" value="configSrv-3&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="g_c" vertex="1">
                     <mxGeometry x="40" y="180" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="legend1" value="&lt;b&gt;3 сервера конфигурации:&lt;/b&gt;&lt;br&gt;Cерверы конфигурации разворачиваются как Replica Set (CSRS). Необходимо минимум 3 узла для кворума: это обеспечивает отказоустойчивость (High Availability). Без кворума кластер MongoDB не сможет выбирать Primary-узел, обновлять метаданные и балансировать чанки." style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontColor=#000000;spacingLeft=10;spacingTop=10;spacingRight=10;spacingBottom=10;" vertex="1" parent="1">
-                    <mxGeometry x="1010" y="50" width="260" height="180" as="geometry"/>
+                <mxCell id="legend1" value="&lt;b&gt;Почему 3 сервера конфигурации?&lt;/b&gt;&lt;br&gt;Начиная с MongoDB 3.2, серверы конфигурации разворачиваются как Replica Set (CSRS). Необходимо минимум 3 узла для кворума: это обеспечивает отказоустойчивость (High Availability). Без кворума кластер MongoDB не сможет выбирать Primary-узел, обновлять метаданные и балансировать чанки." style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontColor=#000000;spacingLeft=10;spacingTop=10;spacingRight=10;spacingBottom=10;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="100" width="250" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="g_s1" value="Replica Set Shard 1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
                     <mxGeometry x="150" y="380" width="220" height="260" as="geometry"/>
@@ -100,7 +100,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="step3_caching" name="3. Caching">
-        <mxGraphModel dx="1530" dy="1166" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -108,13 +108,13 @@
                     <mxGeometry x="400" y="50" width="160" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="redis" value="redis&lt;br&gt;(Кэш)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="70" y="150" width="160" height="60" as="geometry"/>
+                    <mxGeometry x="150" y="150" width="160" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="mongos" value="mongos&lt;br&gt;(Роутер)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="400" y="200" width="160" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="g_c" value="Replica Set Config" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="800" y="50" width="220" height="260" as="geometry"/>
+                    <mxGeometry x="660" y="100" width="220" height="260" as="geometry"/>
                 </mxCell>
                 <mxCell id="c1" value="configSrv-1&lt;br&gt;(Первичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="g_c" vertex="1">
                     <mxGeometry x="40" y="20" width="140" height="60" as="geometry"/>
@@ -124,6 +124,9 @@
                 </mxCell>
                 <mxCell id="c3" value="configSrv-3&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="g_c" vertex="1">
                     <mxGeometry x="40" y="180" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend2" value="&lt;b&gt;Почему 3 сервера конфигурации?&lt;/b&gt;&lt;br&gt;Начиная с MongoDB 3.2, серверы конфигурации разворачиваются как Replica Set (CSRS). Необходимо минимум 3 узла для кворума: это обеспечивает отказоустойчивость (High Availability). Без кворума кластер MongoDB не сможет выбирать Primary-узел, обновлять метаданные и балансировать чанки." style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontColor=#000000;spacingLeft=10;spacingTop=10;spacingRight=10;spacingBottom=10;" vertex="1" parent="1">
+                    <mxGeometry x="900" y="100" width="250" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="g_s1" value="Replica Set Shard 1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
                     <mxGeometry x="150" y="380" width="220" height="260" as="geometry"/>
@@ -149,13 +152,13 @@
                 <mxCell id="s23" value="shard2-3&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="g_s2" vertex="1">
                     <mxGeometry x="40" y="180" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="ecache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="api" target="redis">
+                <mxCell id="ecache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="api" target="redis" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="api" target="mongos" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="eredisToMongos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="redis" target="mongos">
+                <mxCell id="eredisToMongos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="1" source="redis" target="mongos" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mongos" target="g_c" edge="1">
@@ -167,8 +170,120 @@
                 <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mongos" target="g_s2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="bjwPpYj-MuAmLwBLa-L6-1" value="&lt;b&gt;3 сервера конфигурации:&lt;/b&gt;&lt;br&gt;Cерверы конфигурации разворачиваются как Replica Set (CSRS). Необходимо минимум 3 узла для кворума: это обеспечивает отказоустойчивость (High Availability). Без кворума кластер MongoDB не сможет выбирать Primary-узел, обновлять метаданные и балансировать чанки." style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontColor=#000000;spacingLeft=10;spacingTop=10;spacingRight=10;spacingBottom=10;" vertex="1" parent="1">
-                    <mxGeometry x="1070" y="50" width="260" height="180" as="geometry"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="step4_gateway_consul" name="4. Gateway &amp; Consul">
+        <mxGraphModel dx="2444" dy="1799" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="gw" value="API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="-150" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="consul" value="Consul&lt;br&gt;(Service Discovery)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="-150" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="g_apps" value="Application Instances" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="50" width="460" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="api1" value="pymongo-api-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;fontStyle=1;" parent="g_apps" vertex="1">
+                    <mxGeometry x="60" y="20" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="api2" value="pymongo-api-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;fontStyle=1;" parent="g_apps" vertex="1">
+                    <mxGeometry x="260" y="20" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="redis" value="redis&lt;br&gt;(Кэш)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="-80" y="70" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="mongos" value="mongos&lt;br&gt;(Роутер)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="300" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="g_c" value="Replica Set Config" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="200" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="c1" value="configSrv-1&lt;br&gt;(Первичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="g_c" vertex="1">
+                    <mxGeometry x="40" y="20" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="c2" value="configSrv-2&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="g_c" vertex="1">
+                    <mxGeometry x="40" y="100" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="c3" value="configSrv-3&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="g_c" vertex="1">
+                    <mxGeometry x="40" y="180" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="g_s1" value="Replica Set Shard 1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="500" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="s11" value="shard1-1&lt;br&gt;(Первичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="g_s1" vertex="1">
+                    <mxGeometry x="40" y="20" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12" value="shard1-2&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="g_s1" vertex="1">
+                    <mxGeometry x="40" y="100" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s13" value="shard1-3&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="g_s1" vertex="1">
+                    <mxGeometry x="40" y="180" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="g_s2" value="Replica Set Shard 2" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="500" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="s21" value="shard2-1&lt;br&gt;(Первичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="g_s2" vertex="1">
+                    <mxGeometry x="40" y="20" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s22" value="shard2-2&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="g_s2" vertex="1">
+                    <mxGeometry x="40" y="100" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s23" value="shard2-3&lt;br&gt;(Вторичный)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="g_s2" vertex="1">
+                    <mxGeometry x="40" y="180" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_gw_api1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="gw" target="api1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_gw_api2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="gw" target="api2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_gw_consul" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="1" source="gw" target="consul" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_api1_consul" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#FF3333;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="api1" target="consul" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="440"/>
+                            <mxPoint x="780"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_api2_consul" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#FF3333;" parent="1" source="api2" target="consul" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="780" y="100"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ecache1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF3333;dashed=1;dashPattern=12 12;" parent="1" source="api1" target="redis" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ecache2" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF3333;rounded=1;shadow=0;dashed=1;dashPattern=12 12;" parent="1" source="api2" target="redis" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="600" y="190"/>
+                            <mxPoint x="30" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="eapi1_mongos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#009900;" parent="1" source="api1" target="mongos" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="eapi2_mongos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#66CC00;" parent="1" source="api2" target="mongos" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_m_c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mongos" target="g_c" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_m_s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mongos" target="g_s1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_m_s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mongos" target="g_s2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
