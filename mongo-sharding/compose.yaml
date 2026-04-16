@@ -2,14 +2,14 @@ name: mongo-sharding
 
 services:
   configSrv:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: configSrv
     command: mongod --port 27017 --configsvr --replSet config_replica_set
     volumes:
       - config_data:/data/configdb
 
   shard1:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: shard1
     command: mongod --port 27018 --shardsvr --replSet shard1
     volumes:
@@ -18,7 +18,7 @@ services:
       - "27018:27018"
 
   shard2:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: shard2
     command: mongod --port 27019 --shardsvr --replSet shard2
     volumes:
@@ -27,7 +27,7 @@ services:
       - "27019:27019"
 
   mongos:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: mongos
     command: mongos --port 27020 --configdb config_replica_set/configSrv:27017 --bind_ip_all
     ports:

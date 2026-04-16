@@ -3,19 +3,19 @@ name: mongo-sharding-repl
 services:
   # Config Server Replica Set
   configSrv-1:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: configSrv-1
     command: mongod --port 27017 --configsvr --replSet config_replica_set
     volumes:
       - config_data_1:/data/configdb
   configSrv-2:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: configSrv-2
     command: mongod --port 27017 --configsvr --replSet config_replica_set
     volumes:
       - config_data_2:/data/configdb
   configSrv-3:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: configSrv-3
     command: mongod --port 27017 --configsvr --replSet config_replica_set
     volumes:
@@ -23,19 +23,19 @@ services:
 
   # Shard 1 Replica Set
   shard1-1:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: shard1-1
     command: mongod --port 27018 --shardsvr --replSet shard1
     volumes:
       - shard1_data_1:/data/db
   shard1-2:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: shard1-2
     command: mongod --port 27018 --shardsvr --replSet shard1
     volumes:
       - shard1_data_2:/data/db
   shard1-3:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: shard1-3
     command: mongod --port 27018 --shardsvr --replSet shard1
     volumes:
@@ -43,19 +43,19 @@ services:
 
   # Shard 2 Replica Set
   shard2-1:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: shard2-1
     command: mongod --port 27019 --shardsvr --replSet shard2
     volumes:
       - shard2_data_1:/data/db
   shard2-2:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: shard2-2
     command: mongod --port 27019 --shardsvr --replSet shard2
     volumes:
       - shard2_data_2:/data/db
   shard2-3:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: shard2-3
     command: mongod --port 27019 --shardsvr --replSet shard2
     volumes:
@@ -63,7 +63,7 @@ services:
 
   # Router
   mongos:
-    image: dh-mirror.gitverse.ru/mongo:latest
+    image: dh-mirror.gitverse.ru/mongo:7
     container_name: mongos
     command: mongos --port 27020 --configdb config_replica_set/configSrv-1:27017,configSrv-2:27017,configSrv-3:27017 --bind_ip_all
     ports:

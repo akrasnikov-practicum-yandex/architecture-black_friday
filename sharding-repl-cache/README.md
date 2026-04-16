@@ -10,7 +10,18 @@
 - Shard 1 (`shard1-1`, `shard1-2`, `shard1-3`)
 - Shard 2 (`shard2-1`, `shard2-2`, `shard2-3`)
 
-## Как запустить кластер
+## Быстрый запуск (рекомендуется)
+
+Все шаги ниже автоматизированы в скрипте [../scripts/init-sharding-repl-cache.sh](../scripts/init-sharding-repl-cache.sh):
+
+```bash
+docker compose up -d
+../scripts/init-sharding-repl-cache.sh
+```
+
+После этого можно сразу открывать `http://localhost:8080/` — см. раздел «Проверка работы приложения и кеширования» ниже.
+
+## Как запустить кластер (по шагам вручную)
 
 1. **Запустите контейнеры:**
 В терминале, из локальной папки `sharding-repl-cache`, выполните:
